@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		2C359A512A1C2F3900C28884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C359A502A1C2F3900C28884 /* AppDelegate.swift */; };
 		2C359A532A1C2F3900C28884 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C359A522A1C2F3900C28884 /* SceneDelegate.swift */; };
-		2C359A552A1C2F3900C28884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C359A542A1C2F3900C28884 /* ViewController.swift */; };
 		2C359A582A1C2F3900C28884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C359A562A1C2F3900C28884 /* Main.storyboard */; };
 		2C359A5A2A1C2F3C00C28884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C359A592A1C2F3C00C28884 /* Assets.xcassets */; };
 		2C359A5D2A1C2F3C00C28884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C359A5B2A1C2F3C00C28884 /* LaunchScreen.storyboard */; };
+		2C359A652A1C2FD200C28884 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C359A642A1C2FD200C28884 /* Emoji.swift */; };
+		2C359A672A1C318900C28884 /* EmojiTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C359A662A1C318900C28884 /* EmojiTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C359A4D2A1C2F3900C28884 /* EmojiDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C359A502A1C2F3900C28884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C359A522A1C2F3900C28884 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C359A542A1C2F3900C28884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C359A572A1C2F3900C28884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C359A592A1C2F3C00C28884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C359A5C2A1C2F3C00C28884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C359A5E2A1C2F3C00C28884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C359A642A1C2FD200C28884 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		2C359A662A1C318900C28884 /* EmojiTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				2C359A502A1C2F3900C28884 /* AppDelegate.swift */,
 				2C359A522A1C2F3900C28884 /* SceneDelegate.swift */,
-				2C359A542A1C2F3900C28884 /* ViewController.swift */,
+				2C359A642A1C2FD200C28884 /* Emoji.swift */,
 				2C359A562A1C2F3900C28884 /* Main.storyboard */,
+				2C359A662A1C318900C28884 /* EmojiTableTableViewController.swift */,
 				2C359A592A1C2F3C00C28884 /* Assets.xcassets */,
 				2C359A5B2A1C2F3C00C28884 /* LaunchScreen.storyboard */,
 				2C359A5E2A1C2F3C00C28884 /* Info.plist */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C359A552A1C2F3900C28884 /* ViewController.swift in Sources */,
+				2C359A652A1C2FD200C28884 /* Emoji.swift in Sources */,
+				2C359A672A1C318900C28884 /* EmojiTableTableViewController.swift in Sources */,
 				2C359A512A1C2F3900C28884 /* AppDelegate.swift in Sources */,
 				2C359A532A1C2F3900C28884 /* SceneDelegate.swift in Sources */,
 			);
@@ -302,6 +306,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Data-Collections-Lab.EmojiDictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -330,6 +337,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Data-Collections-Lab.EmojiDictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
