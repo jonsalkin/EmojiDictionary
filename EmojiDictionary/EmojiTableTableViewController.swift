@@ -9,46 +9,40 @@ import UIKit
 
 class EmojiTableTableViewController: UITableViewController {
 
-    
-    
-    var emojis: [Emoji] = [
-           Emoji(symbol: "😀", name: "Grinning Face", description: "A typical smiley face.", usage: "happiness"),
-           Emoji(symbol: "😕", name: "Confused Face",description: "A confused, puzzled face.", usage: "unsure what to think; displeasure"),
-           Emoji(symbol: "😍", name: "Heart Eyes", description: "A smiley face with hearts for eyes.", usage: "love of something; attractive"),
-           Emoji(symbol: "🧑‍💻", name: "Developer", description: "A person working on a MacBook (probably using Xcode to write iOS apps in Swift).", usage: "apps, software, programming"),
-           Emoji(symbol: "🐢", name: "Turtle", description: "A cute turtle.", usage: "something slow"),
-           Emoji(symbol: "🐘", name: "Elephant", description: "A gray elephant.", usage: "good memory"),
-           Emoji(symbol: "🍝", name: "Spaghetti", description: "A plate of spaghetti.", usage: "spaghetti"),
-           Emoji(symbol: "🎲", name: "Die", description: "A single die.", usage: "taking a risk, chance; game"),
-           Emoji(symbol: "⛺️", name: "Tent", description: "A small tent.", usage: "camping"),
-           Emoji(symbol: "📚", name: "Stack of Books", description: "Three colored books stacked on each other.", usage: "homework, studying"),
-           Emoji(symbol: "💔", name: "Broken Heart", description: "A red, broken heart.", usage: "extreme sadness"),
-           Emoji(symbol: "💤", name: "Snore", description: "Three blue \'z\'s.", usage: "tired, sleepiness"),
-           Emoji(symbol: "🏁", name: "Checkered Flag", description: "A black-and-white checkered flag.", usage: "completion"),
-           Emoji(symbol: "🍕", name: "Pizza", description: "A slice of pizza.", usage: "meal, comfort food"),
-           Emoji(symbol: "🍣", name: "Sushi", description: "Two pieces of sushi, salmon and tuna on rice", usage: "Japanese food"),
-           Emoji(symbol: "🇺🇸", name: "American Flag", description: "The flag of the United States", usage: "American patriotism"),
-           Emoji(symbol: "🇵🇭", name: "Filipino Flag", description: "The flag of the Philippine Islands", usage: "Asian pride, Filipino Pride"),
-           Emoji(symbol: "🇺🇦", name: "Ukranian Flag", description: "The flag of Ukraine", usage: "Ukraine heritage, family, and freedom"),
-           Emoji(symbol: "🔥", name: "Fire", description: "That food is fire", usage: "Can be used literally or describing delicious food"),
-           Emoji(symbol: "🪭", name: "Folding Hand Fan", description: "Traditional red, Asian fan", usage: "Used for performance or to cool oneself")
-    ]
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
+    var emojis: [Emoji] = [] {
+        didSet {
+            Emoji.saveToFile(emojis: emojis)
+        }
     }
+    
+
+
     
     //MARK: - VDL
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        if let savedEmojis = Emoji.loadFromFile() {
+            emojis = savedEmojis
+        } else {
+            emojis = Emoji.sampleEmojis
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    
+    
     
     // MARK: - Table view data source
 

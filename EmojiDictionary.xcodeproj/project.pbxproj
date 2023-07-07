@@ -62,10 +62,10 @@
 		2C359A4F2A1C2F3900C28884 /* EmojiDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				2C359A562A1C2F3900C28884 /* Main.storyboard */,
 				2C359A502A1C2F3900C28884 /* AppDelegate.swift */,
 				2C359A522A1C2F3900C28884 /* SceneDelegate.swift */,
 				2C359A642A1C2FD200C28884 /* Emoji.swift */,
-				2C359A562A1C2F3900C28884 /* Main.storyboard */,
 				2C359A662A1C318900C28884 /* EmojiTableTableViewController.swift */,
 				2CD6DC752A1EF2E500013232 /* AddEditEmojiTableViewController.swift */,
 				2CD6DC732A1EC80D00013232 /* EmojiTableViewCell.swift */,
